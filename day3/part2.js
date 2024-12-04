@@ -9,7 +9,7 @@ const result = matches.reduce((coll, [command, n1, n2]) => {
             coll.stop = false;
             break;
         default:
-            if(!coll.stop) {
+            if(!coll.stop && n1 && n2) {
                 coll.mul += n1*n2;
             }
             break;
